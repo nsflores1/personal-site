@@ -131,7 +131,7 @@ author = "Nathaniel Flores" # Put Your Name here
 #twitter_meta = "your-user-name" # for SEO: twitter:site and twitter:creator
 #google = "Your Google Site verification code."
 #bing = "Your Bing Site verification code."
-seo = true  # enable or disable seo-related meta tags: opengraph, facebook, twitter
+seo = false  # enable or disable seo-related meta tags: opengraph, facebook, twitter
 dev = true # development mode, if true then robots.txt should prevent search indexing.
 
 #head_extra = '<meta name="analytics" content="my-analytics-id" /><meta name="advertising" content="my-advertising-id" />'
