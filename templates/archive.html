@@ -57,11 +57,6 @@ This Template can also be used as the rendering template for Sections, eg: examp
       {%- if section_item.title %}
       <h2>{{ section_item.title }}</h2>
       {%- endif %}
-      <!-- TODO: this is your own custom patch, -->
-      <!-- maybe move this elsewhere? -->
-      {% if section_item.path == "" %}
-         {{ section_item.content | safe }}
-      {% endif %}
       {%- if config.extra.archive_reverse %}
       {%- for year, posts in section_item.pages | sort(attribute="year") | reverse | group_by(attribute="year") %}
       {%- if not hide_section_dates %}

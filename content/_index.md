@@ -1,5 +1,7 @@
 +++
-template = "homepage.html"
+paginate_by = 3
+sort_by = "date"
+template = "index.html"
 +++
 
 Welcome to my website! Blog posts are on the right, but are scant for now as I haven't put out anything yet (this site is still in initial development). For now, try using one of the links down below!
