@@ -19,13 +19,13 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex
+          root_file: content/resume/resume.tex
       - name: Commit and push PDF
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git fetch
           git checkout gh-pages
-          git add main.pdf
+          git add content/resume/resume.pdf
           git commit -m "Auto: Update compiled PDF" || echo "No changes to commit"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git main
