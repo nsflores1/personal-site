@@ -24,9 +24,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mv resume.pdf content/resume/
+          rm static/resume.pdf
+          mv resume.pdf static/resume.pdf
           git fetch
           git checkout gh-pages
-          git add content/resume/resume.pdf
-          git commit -m "Auto: Update compiled PDF" || echo "No changes to commit"
+          git add static/resume.pdf
+          git commit -m "GitHub Actions: Update compiled PDF" || echo "No changes to commit"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git main
