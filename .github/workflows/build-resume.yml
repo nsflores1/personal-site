@@ -24,6 +24,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          mv resume.pdf content/resume/
           git fetch
           git checkout gh-pages
           git add content/resume/resume.pdf
