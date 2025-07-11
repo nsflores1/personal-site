@@ -18,10 +18,10 @@ jobs:
 
   build-resume:
     needs: changes
-    if: needs.changes.outputs.resume == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
+        if: needs.changes.outputs.resume == 'true'
         uses: actions/checkout@v4
         
       - name: Compile resume
@@ -42,6 +42,10 @@ jobs:
         with:
           name: resume-pdf
           path: static/resume.pdf
+
+      - name: No-Operation
+        if: needs.changes.outputs.resume != 'true'
+        run: echo "no resume changes"
 
   build-site:
     needs: [changes, build-resume]
