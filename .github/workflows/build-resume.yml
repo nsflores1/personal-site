@@ -1,0 +1,27 @@
+on:
+  push:
+    paths:
+      - 'content/resume/*.tex'
+      - '.github/workflows/build-resume.yml'
+name: Build resume
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: install tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://drop-sh.fullyjustified.net | sh
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+      - name: compile resume
+        working-directory: content/resume
+        run: tectonic resume.tex
+      - name: commit pdf
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add content/resume/resume.pdf
+          git commit -m "auto: build resume" || echo "no changes"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
