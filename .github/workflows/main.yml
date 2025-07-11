@@ -33,8 +33,8 @@ jobs:
       - name: Move PDF into static/
         if: needs.changes.outputs.resume == 'true'
         run: |
-        mkdir -p static/
-        mv resume.pdf static/resume.pdf
+         mkdir -p static/
+         mv resume.pdf static/resume.pdf
       
       - name: Upload resume artifact
         if: needs.changes.outputs.resume == 'true'
