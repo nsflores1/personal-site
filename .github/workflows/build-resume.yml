@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: install tectonic
         run: |
-          curl --proto '=https' --tlsv1.2 -sSf https://drop-sh.fullyjustified.net | sh
+          curl --proto=https --tlsv1.2 -sSf https://drop-sh.fullyjustified.net | sh
           echo "$HOME/.cargo/bin" >> $GITHUB_PATH
       - name: compile resume
         working-directory: content/resume
