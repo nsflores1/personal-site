@@ -4,6 +4,6 @@ sort_by = "date"
 template = "index.html"
 +++
 
-Welcome to my website! Blog posts are on the right, but are scant for now as I haven't put out anything yet (this site is still in initial development). For now, try using one of the links down below!
+Welcome to my website. You may have come here looking for my [resume](https://nsf.name/resume.pdf) or my [blog](https://nsf.name/archive/). 
 
-Note that the email button doesn't work at present (haven't finished setting up the domain MX record). When that's done, it should forward fine.
+At present, I'm a third-year geosciences student at Williams College mostly interested in remote sensing and high performance computing, and this blog is an archive of the problems I run into in those domains along with my other academic and programming pursuits.  
