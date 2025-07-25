@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://nsf.name/</loc>
+    </url>
+    <url>
+        <loc>https://nsf.name/about/</loc>
+    </url>
+    <url>
+        <loc>https://nsf.name/archive/</loc>
+    </url>
+    <url>
+        <loc>https://nsf.name/blog/</loc>
+    </url>
+    <url>
+        <loc>https://nsf.name/contact/</loc>
+    </url>
+    <url>
+        <loc>https://nsf.name/hello-world/</loc>
+        <lastmod>2025-07-02T19:00:00Z</lastmod>
+    </url>
+    <url>
+        <loc>https://nsf.name/offline/</loc>
+    </url>
+    <url>
+        <loc>https://nsf.name/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://nsf.name/privacy/</loc>
+    </url>
+    <url>
+        <loc>https://nsf.name/tags/</loc>
+    </url>
+</urlset>
