@@ -39,13 +39,22 @@ include_content = true      # include rendered content of page/section in index
 highlight_code = true
 highlight_theme = "css"
 bottom_footnotes = true # adds footnote backreference
-render_emoji = false
+render_emoji = true
 external_links_target_blank = true # rel="noopener"
 external_links_no_follow = false   # rel="nofollow"
 external_links_no_referrer = false # rel="noreferrer"
 smart_punctuation = false          # `...` to `…`, `"quote"` to `“curly”` etc
 
 # Any Extra language you do not use, delete or comment out the extra language sections:
+
+[languages.ja]
+title = "フローレス・ナサニエル"
+description = "フローレス・ナサニエルの個人サイトです。"
+generate_feeds = true
+#build_search_index = true
+#search.include_description = true
+#search.include_content = true
+
 
 # [languages.pt]
 # title = "Abridge"
@@ -133,7 +142,7 @@ author = "Nathaniel Flores" # Put Your Name here
 #twitter_meta = "your-user-name" # for SEO: twitter:site and twitter:creator
 #google = "Your Google Site verification code."
 #bing = "Your Bing Site verification code."
-seo = false  # enable or disable seo-related meta tags: opengraph, facebook, twitter
+seo = true  # enable or disable seo-related meta tags: opengraph, facebook, twitter
 dev = true # development mode, if true then robots.txt should prevent search indexing.
 
 #head_extra = '<meta name="analytics" content="my-analytics-id" /><meta name="advertising" content="my-advertising-id" />'

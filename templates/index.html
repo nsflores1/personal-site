@@ -31,9 +31,12 @@ This Template can also be used directly for the index eg: example.com/ or as the
 {%- endblock seo %}
 
 {%- block content %}
-    <div>
-      {%- for page in paginator.pages %}
-        {{ section.content | safe }}
+<div>
+      {{ section.content | safe }}
+  
+      {%- set posts = get_section(path="posts/_index.md") %}
+      {%- for page in posts.pages %}
+        
       <article>
         {{- macros::title_index(page=page, config=config) }}
         {%- if config.extra.meta_index.position %}
@@ -82,9 +85,9 @@ This Template can also be used directly for the index eg: example.com/ or as the
     {%- endif %}
 
     {%- if lang == config.default_language %}
-    {%- set section_item = get_section(path=sec ~ "_index.md") %}
+    {%- set section_item = get_section(path="posts/" ~ "_index.md") %}
     {%- else %}
-    {%- set section_item = get_section(path=sec ~ "_index." ~ lang ~ ".md") %}
+    {%- set section_item = get_section(path="posts/" ~ "_index." ~ lang ~ ".md") %}
     {%- endif %}
     <div class="sblock">
       <div class="blockdiv sticky">

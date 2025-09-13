@@ -1,5 +1,6 @@
 +++
 paginate_by = 3
+paginate_path = "page"
 sort_by = "date"
 template = "index.html"
 +++
