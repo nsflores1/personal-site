@@ -47,10 +47,11 @@ smart_punctuation = false          # `...` to `…`, `"quote"` to `“curly”` 
 
 # Any Extra language you do not use, delete or comment out the extra language sections:
 
-[languages.ja]
-title = "フローレス・ナサニエル"
-description = "フローレス・ナサニエルの個人サイトです。"
-generate_feeds = true
+# [languages.ja]
+# title = "フローレス・ナサニエル"
+# description = "フローレス・ナサニエルの個人サイトです。"
+# generate_feeds = true
+# TODO: uncomment when branch is ready
 #build_search_index = true
 #search.include_description = true
 #search.include_content = true
