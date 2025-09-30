@@ -23,28 +23,28 @@ This Template can also be used as the rendering template for Sections, eg: examp
 {%- endblock seo %}
 
 {%- block content %}
+    {%- set langpath = "/" %}
+    {%- if lang != config.default_language %}
+      {%- set langpath = "/" ~ lang ~ "/" %}
+    {%- endif %}
+
     {#- The following line is checking if the template is being used for the archive page or a section #}
     {%- if current_path is matching("^(/[[:alpha:]][[:alpha:]])?/archive/$") %}
       {%- if section.extra.sec %}
         {%- set sec = section.extra.sec ~ "/" %}
+      {%- endif %}
       {%- else %}
         {%- set sec = "" %}
-      {%- endif %}
-    {%- else %}
-      {%- set langpath = "/" %}
-      {%- if lang != config.default_language %}
-        {%- set langpath = "/" ~ lang ~ "/" %}
-      {%- endif %}
-
-      {%- set sec = current_path | trim_start_matches(pat=langpath) | split(pat="/page/") | slice(end=1) | join(sep="") | trim_end_matches(pat="/") %}
-      {%- set sec = sec ~ "/" %}
     {%- endif %}
+
+    {%- set sec = current_path | trim_start_matches(pat=langpath) | split(pat="/page/") | slice(end=1) | join(sep="") | trim_end_matches(pat="/") %}
 
     {%- if lang == config.default_language %}
-    {%- set section_item = get_section(path="posts/" ~ "_index.md") %}
+      {%- set section_item = get_section(path="posts/" ~ "_index.md") %}
     {%- else %}
-    {%- set section_item = get_section(path="posts/" ~ "_index." ~ lang ~ ".md") %}
+      {%- set section_item = get_section(path="posts/" ~ "_index.md", lang=lang) %}
     {%- endif %}
+
     {%- if sec != "" %}
       {#- the section always overrides the config -#}
       {%- if section_item.extra and 'hide_section_dates' in section_item.extra -%}

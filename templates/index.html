@@ -33,8 +33,13 @@ This Template can also be used directly for the index eg: example.com/ or as the
 {%- block content %}
 <div>
       {{ section.content | safe }}
-  
-      {%- set posts = get_section(path="posts/_index.md") %}
+
+      {%- if lang == config.default_language %}
+        {%- set posts= get_section(path="posts/" ~ "_index.md") %}
+      {%- else %}
+        {%- set posts = get_section(path="posts/" ~ "_index.md", lang=lang) %}
+      {%- endif %}
+      
       {%- for page in posts.pages %}
         
       <article>
