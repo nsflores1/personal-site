@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>nsf.name</title>
+    <subtitle>The personal website of Nathaniel Flores.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://nsf.name/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://nsf.name"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-07-02T19:00:00+00:00</updated>
+    <id>https://nsf.name/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Hello World</title>
+        <published>2025-07-02T19:00:00+00:00</published>
+        <updated>2025-07-02T19:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nsf.name/posts/hello-world/"/>
+        <id>https://nsf.name/posts/hello-world/</id>
+        
+        <summary type="html">&lt;p&gt;Hello world! Luckily this page works and displays well in most RSS readers. Finally.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+</feed>
